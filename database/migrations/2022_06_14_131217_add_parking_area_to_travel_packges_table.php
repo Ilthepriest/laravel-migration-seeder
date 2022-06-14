@@ -14,7 +14,7 @@ class AddParkingAreaToTravelPackgesTable extends Migration
     public function up()
     {
         Schema::table('travel_packges', function (Blueprint $table) {
-            $table->boolean('parking_area')->defeult(true)->after('location');
+            $table->boolean('parking_area')->after('location');
         });
     }
 

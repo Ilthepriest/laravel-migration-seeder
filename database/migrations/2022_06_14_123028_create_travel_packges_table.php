@@ -21,6 +21,7 @@ class CreateTravelPackgesTable extends Migration
             $table->tinyInteger('person');
             $table->tinyInteger('child');
             $table->string('location');
+            $table->string('parking_area');
             $table->string('type');
             $table->smallInteger('square_meters')->unsigned();
             $table->tinyInteger('rooms');
@@ -30,8 +31,6 @@ class CreateTravelPackgesTable extends Migration
             $table->string('breakfast');
             $table->string('lunch_dinner');
             $table->string('airplane_flight');
-            $table->dateTimeTz('check_in');
-            $table->dateTimeTz('check_out');
             $table->boolean('is_available')->default(false);
             $table->timestamps();
         });

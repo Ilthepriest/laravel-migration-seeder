@@ -20,6 +20,7 @@ class travel_packgesTableSeeder extends Seeder
                 'person' => 2,
                 'child' => 0,
                 'location' => 'Isola di Francia - Parigi (FR-75)',
+                'parking_area' => true,
                 'type' => 'Hotels',
                 'square_meters' => 250,
                 'rooms'=> 6,
@@ -29,8 +30,6 @@ class travel_packgesTableSeeder extends Seeder
                 'breakfast' => 'Colazione inclusa',
                 'lunch_dinner' => 'Pranzo e Cena inclusa',
                 'airplane_flight' => 'Si',
-                'check_in' => '2022-06-25 15:00:00',
-                'check_out' => '2022-06-28 10:00:00',
                 'is_available' => true
             ],
 
@@ -41,6 +40,7 @@ class travel_packgesTableSeeder extends Seeder
                 'person' => 2,
                 'child' => 1,
                 'location' => 'Trentino Alto Adige - Trento (IT-TN)',
+                'parking_area' => true,
                 'type' => 'Appartamento',
                 'square_meters' => 300,
                 'rooms'=> 5,
@@ -50,33 +50,30 @@ class travel_packgesTableSeeder extends Seeder
                 'breakfast' => 'Colazione inclusa',
                 'lunch_dinner' => 'Pranzo e Cena inclusa',
                 'airplane_flight' => 'No',
-                'check-in' => '2022-07-13 15:00:00',
-                'check-out' => '2022-06-15 10:00:00',
                 'is_available' => true
             ]
         ];
 
         foreach($travel_packges as $travel_pack){
-            $new_travel_packges = new travel_pack();
-            $new_travel_packges-> name_offerta = $travel_pack['name_offerta'];
-            $new_travel_packges-> price = $travel_pack['price'];
-            $new_travel_packges-> validity = $travel_pack['validity'];
-            $new_travel_packges-> person = $travel_pack['person'];
-            $new_travel_packges-> child = $travel_pack['child'];
-            $new_travel_packges-> location = $travel_pack['location'];
-            $new_travel_packges-> type = $travel_pack['type'];
-            $new_travel_packges-> square_meters = $travel_pack['square_meters'];
-            $new_travel_packges-> rooms = $travel_pack['rooms'];
-            $new_travel_packges-> bathrooms = $travel_pack['bathrooms'];
-            $new_travel_packges-> image = $travel_pack['image'];
-            $new_travel_packges-> description = $travel_pack['description'];
-            $new_travel_packges-> breakfast = $travel_pack['breakfast'];
-            $new_travel_packges-> lunch_dinner = $travel_pack['lunch_dinner'];
-            $new_travel_packges-> airplane_flight = $travel_pack['airplane_flight'];
-            $new_travel_packges-> check_in = $travel_pack['check_in'];
-            $new_travel_packges-> check_out = $travel_pack['check_out'];
-            $new_travel_packges-> is_available = $travel_pack['is_available'];
-            $new_travel_packges-> save();
+            $new_travel_pack = new travel_pack();
+            $new_travel_pack-> name_offerta = $travel_pack['name_offerta'];
+            $new_travel_pack-> price = $travel_pack['price'];
+            $new_travel_pack-> validity = $travel_pack['validity'];
+            $new_travel_pack-> person = $travel_pack['person'];
+            $new_travel_pack-> child = $travel_pack['child'];
+            $new_travel_pack-> location = $travel_pack['location'];
+            $new_travel_pack-> parking_area = $travel_pack['parking_area'];
+            $new_travel_pack-> type = $travel_pack['type'];
+            $new_travel_pack-> square_meters = $travel_pack['square_meters'];
+            $new_travel_pack-> rooms = $travel_pack['rooms'];
+            $new_travel_pack-> bathrooms = $travel_pack['bathrooms'];
+            $new_travel_pack-> image = $travel_pack['image'];
+            $new_travel_pack-> description = $travel_pack['description'];
+            $new_travel_pack-> breakfast = $travel_pack['breakfast'];
+            $new_travel_pack-> lunch_dinner = $travel_pack['lunch_dinner'];
+            $new_travel_pack-> airplane_flight = $travel_pack['airplane_flight'];
+            $new_travel_pack-> is_available = $travel_pack['is_available'];
+            $new_travel_pack-> save();
 
 
         }
